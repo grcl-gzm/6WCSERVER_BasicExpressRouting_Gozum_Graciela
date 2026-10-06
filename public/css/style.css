@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #2b211d;
+    --muted: #76665d;
+    --paper: #fbf8f3;
+    --cream: #eee3d4;
+    --accent: #b65c3a;
+    --accent-dark: #713b2a;
+    --line: #ded2c4;
+}
+
+/* Apply predictable sizing to every element. */
+* {
+    box-sizing: border-box;
+}
+
+/* Basic page colors, font, spacing, and readable line height. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Headings and the logo use the display font. */
+h1, h2, h3, .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.05;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Header and navigation layout. */
+.site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 76px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--accent);
+}
+
+/* Home page hero section. */
+.hero {
+    align-items: center;
+    display: grid;
+    gap: 56px;
+    grid-template-columns: 1.1fr .9fr;
+    min-height: 520px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    letter-spacing: -.04em;
+    margin-bottom: 24px;
+    max-width: 650px;
+}
+
+.hero-copy > p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.button {
+    background: var(--accent);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-weight: 700;
+    padding: 14px 20px;
+}
+
+.button:hover {
+    background: var(--accent-dark);
+}
+
+.button-dark {
+    background: var(--ink);
+}
+
+.hero-art {
+    background: var(--cream);
+    margin-top: 30px;
+    margin-left: -30px;
+    overflow: hidden;
+    min-height: 360px;
+    position: relative;
+    transform: rotate(3deg);
+}
+
+.hero-image {
+    display: block;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.site-footer {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .8rem;
+    margin-top: auto;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.page-content {
+    min-height: calc(100vh - 153px);
+    padding-bottom: 70px;
+}
+
+.page-intro {
+    padding: 72px 0 42px;
+}
+
+.page-intro h1 {
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    margin-bottom: 16px;
+}
+
+.page-intro > p:last-child {
+    color: var(--muted);
+}
+
+.search-form {
+    background: var(--cream);
+    margin-bottom: 24px;
+    padding: 22px;
+}
+
+.search-form label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.search-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.search-controls input {
+    border: 1px solid var(--line);
+    flex: 1;
+    font: inherit;
+    min-width: 0;
+    padding: 12px;
+}
+
+.button-light {
+    background: white;
+    color: var(--ink);
+}
+
+.button-light:hover {
+    background: var(--cream);
+}
+
+.loading-message {
+    color: var(--muted);
+}
+
+.coffee-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coffee-card {
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.coffee-card img {
+    background: var(--cream);
+    display: block;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.coffee-card-content {
+    padding: 20px;
+}
+
+.coffee-card h3 {
+    font-size: 1.5rem;
+    margin: 7px 0 10px;
+}
+
+.coffee-card p {
+    color: var(--muted);
+    font-size: .92rem;
+    min-height: 72px;
+}
+
+.coffee-card strong {
+    color: var(--accent);
+}
+
+/* Contact page information and form layout. */
+.contact-layout {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: .8fr 1.2fr;
+}
+
+.contact-details {
+    align-content: start;
+    display: grid;
+    gap: 24px;
+}
+
+.contact-details p {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    color: var(--accent);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    background: var(--cream);
+    display: grid;
+    gap: 9px;
+    padding: 28px;
+}
+
+.contact-form label {
+    font-size: .85rem;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid var(--line);
+    font: inherit;
+    padding: 12px;
+    resize: vertical;
+}
+
+.contact-form .button {
+    margin-top: 12px;
+}
+
+.about-layout {
+    align-items: center;
+    display: grid;
+    gap: 56px;
+    grid-template-columns: 1fr 1fr;
+    padding: 72px 0 56px;
+}
+
+.about-copy h1 {
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    margin-bottom: 16px;
+}
+
+.about-copy > p:last-child {
+    color: var(--muted);
+    font-size: 1.12rem;
+    max-width: 560px;
+}
+
+.about-image {
+    display: block;
+    height: 420px;
+    object-fit: cover;
+    order: -1;
+    width: 100%;
+}
+
+.about-note {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 50px;
+    grid-template-columns: .8fr 1.2fr;
+    padding-top: 34px;
+}
+
+.about-note > p {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin: 0;
+}
+
+/* Stack columns on smaller screens for mobile users. */
+@media (max-width: 900px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .hero,
+    .contact-layout,
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        gap: 30px;
+        padding: 58px 0;
+    }
+
+    .hero-art {
+        margin-left: 0;
+        min-height: 260px;
+        transform: none;
+    }
+
+    .hero-image {
+        min-height: 260px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-layout {
+        gap: 30px;
+        padding: 58px 0 42px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .about-note {
+        gap: 16px;
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+}

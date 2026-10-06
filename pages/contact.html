@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kape101</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a class="logo" href="/">Kape<span>101</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/menu">Menu</a>
+                <a href="/about">About</a>
+                <a class="active" href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        <section class="page-intro">
+            <h1>Message us!</h1>
+            <p>Have any questions? We would love to help you :)</p>
+        </section>
+        <section class="contact-layout">
+            <div class="contact-details">
+                <div><span class="detail-label">Visit</span><p>Sa kanto lang street 12536<br>Open daily, 8am to 5pm</p></div>
+                <div><span class="detail-label">Email</span><p>hello@kape101.example</p></div>
+                <div><span class="detail-label">Social</span><p>@kape101coffee</p></div>
+            </div>
+            <form class="contact-form" action="/contact" method="get">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Juanito Tobita">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+                <button class="button button-dark" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><p>Kape101 · Gozum | WD-303</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Kape101</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a class="logo" href="/">Kape<span>101</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a class="active" href="/menu">Menu</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        <section class="page-intro">
+            <h1>Explore our coffee menu</h1>
+        </section>
+        <form id="coffee-search" class="search-form">
+            <label for="search-input">Find a coffee</label>
+            <div class="search-controls">
+                <input id="search-input" type="search" placeholder="Try latte" aria-label="Search by coffee name">
+                <button class="button button-dark" type="submit">Search</button>
+                <button class="button button-light" id="clear-search" type="button">Show all</button>
+            </div>
+        </form>
+        <p id="coffee-message" class="loading-message">Loading the menu...</p>
+        <section id="coffee-list" class="coffee-grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><p>Kape101 · Gozum | WD-303</p></div></footer>
+</body>
+</html>
